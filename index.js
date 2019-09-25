@@ -35,4 +35,12 @@ const createLink = () => {
 	document.body.appendChild(newElement);
 };
 
+const removeMadeLink = () => {
+	const elementToRemove = document.querySelector(".made-link");
+	// const parentNode = elementToRemove.parentNode;
+	// parentNode.removeChild(elementToRemove);
+	elementToRemove.parentNode.removeChild(elementToRemove);
+};
+
 document.querySelector(".addLink").addEventListener("click", createLink);
+document.querySelector(".removeLink").addEventListener("click", removeMadeLink);
